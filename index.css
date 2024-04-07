@@ -1,56 +1,35 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
+  background: #081b29;
+  color: #ededed;
 }
-
-.container {
-    width: 80%;
-    margin: 0 auto;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+#page>img {
+  position: absolute;
+  left: 40%;
+  top: 52%;
+  transform: translateY(-40%);
+  width: 50%;
 }
-
-header h1 {
-    margin: 0;
-    display: inline;
-}
-
-nav ul {
-    list-style: none;
-    float: right;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-#hero {
-    background-image: url(https://wallpapercave.com/wp/wp7453677.jpg);
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
-}
-
-#hero h2 {
-    font-size: 7.5rem;
-}
-
-#hero p {
-    font-size: 5.2rem;
-}
-
 section {
-    background-color:  green;
+    background-color:transparent;
     padding: 70px 0;
 }
 
@@ -59,10 +38,13 @@ section h2 {
 }
 
 .project {
-    background-color:grey;
+    background-color:transparent;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
+}
+.project h2{
+  margin-bottom: 15px;
 }
 
 .project h3 {
@@ -86,4 +68,141 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+.logo {
+  font-size:25px;
+  color: #ededed;
+  text-decortion: none;
+  font-weight: 600;
+}
+.navbar a {
+  font-size:18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 35px;
+  transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active{
+  color:skyblue;
+}
+.Home{
+  height: 100vh;
+  background: url('home.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+.Home-content {
+  max-width:600px;
+}
+.Home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-heigth: 1.2;
+}
+.Home-content h3 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #00abf0;
+}
+.Home-content p {
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+.Home-content  .btn-box {
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+  
+}
+.btn-box a {
+  position: realtive;
+  display: inline-flex;
+  justify-content: center;
+  width: 150ps;
+  height: 100%;
+  background: #00abf0;
+  border: 2px solid #00abf0;
+  border-radius: 5px;
+  font-size: 19px;
+  color: #081b29;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 3px;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+.btn-box a:hover {
+  color:#0fc0fc;
+}
+.btn-box a:nth-child(2) {
+  background: transparent;
+  color:#00abf0;
+}
+.btn-box a:nth-child(2):hover {
+  color:#808080;
+} 
+.btn-box a:nth-child(2)::before {
+  background:#00abf0;
+}
+.btn-box a:: before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background:black;
+  z-index: -1;
+  transition: .5s;
+}
+.btn-box a:hover::before {
+  width: 100%;
+}
+.Home-sci {
+  position: absolute;
+  bottom: 40px;
+  width:170px;
+  display: flex;
+  justify-content: space-between;
+}
+.Home-sci a {
+  position: relative;
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+}
+.Home-sci a:hover {
+  color:#007f66;
+}
+.Home-sci a::before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  heigth: 100%;
+  background:#00abf0;
+  z-index: -1;
+  transition: .5s;
+}
+.Home-sci a:hover::before {
+  width: 100%;
 }
